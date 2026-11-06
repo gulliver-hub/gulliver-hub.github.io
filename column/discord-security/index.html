@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discordサーバーの乗っ取り対策｜管理者がやるべき設定と習慣｜ガリバー</title>
+<meta name="description" content="Discordの管理者アカウントが乗っ取られると、サーバーが壊されてしまいます。二段階認証・セキュリティキー・権限の見直し・よくある詐欺の手口・乗っ取られたときの対処まで、Discordコミュニティマネージャーのガリバーが解説します。">
+<link rel="canonical" href="https://gulliver2021.com/column/discord-security/">
+<meta property="og:title" content="Discordサーバーの乗っ取り対策｜管理者がやるべき設定と習慣">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gulliver2021.com/column/discord-security/">
+<meta property="og:image" content="https://gulliver2021.com/images/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gulliver_hub">
+<link rel="icon" href="../../images/favicon.png">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Discordサーバーの乗っ取り対策｜管理者がやるべき設定と習慣",
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "inLanguage": "ja",
+      "image": "https://gulliver2021.com/images/ogp.jpg",
+      "mainEntityOfPage": "https://gulliver2021.com/column/discord-security/",
+      "author": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）", "url": "https://gulliver2021.com/"},
+      "publisher": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://gulliver2021.com/"},
+        {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://gulliver2021.com/column/"},
+        {"@type": "ListItem", "position": 3, "name": "Discordサーバーの乗っ取り対策", "item": "https://gulliver2021.com/column/discord-security/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../../">ガリバー</a>
+    <div class="menu">
+      <a href="../../#service">サービス</a>
+      <a href="../../#works">実績</a>
+      <a href="../">コラム</a>
+      <a class="cta-small" href="../../#contact">無料で相談する</a>
+    </div>
+  </div>
+</nav>
+
+<main class="article">
+  <p class="crumb"><a href="../../">ホーム</a> ＞ <a href="../">コラム</a> ＞ Discordサーバーの乗っ取り対策</p>
+  <h1>Discordサーバーの乗っ取り対策｜管理者がやるべき設定と習慣</h1>
+  <p class="meta">2026年11月7日 ／ 執筆：ガリバー（Discordコミュニティマネージャー）</p>
+
+  <p>Discordでは、管理者やモデレーターのアカウントが乗っ取られると、チャンネルの削除、メンバーの一斉追放、詐欺リンクの一斉送信などで<strong>サーバーが一瞬で壊されてしまう</strong>ことがあります。</p>
+  <p>長い時間をかけて育てたコミュニティを守るために、運営者が今日からできる対策をまとめました。</p>
+
+  <ol class="toc">
+    <li><a href="#account">自分のアカウントを守る</a></li>
+    <li><a href="#server">サーバーの設定を見直す</a></li>
+    <li><a href="#scam">よくある乗っ取りの手口</a></li>
+    <li><a href="#hacked">乗っ取られたときの対処</a></li>
+  </ol>
+
+  <h2 id="account">1. 自分のアカウントを守る</h2>
+  <h3>二段階認証を必ずオンにする</h3>
+  <p>パスワードだけでは、流出したときに防げません。Discordの「マイアカウント」から二段階認証を設定しましょう。認証アプリを使う方法が基本です。</p>
+  <h3>セキュリティキーやパスキーを使う</h3>
+  <p>より強く守りたい場合は、セキュリティキー（物理的な鍵）やパスキーの登録がおすすめです。偽のログイン画面にだまされても、鍵がなければログインされにくくなります。</p>
+  <h3>パスワードを使い回さない</h3>
+  <p>ほかのサービスと同じパスワードを使っていると、そちらから流出したときに一緒に乗っ取られます。Discord専用の、長く推測されにくいパスワードにしましょう。</p>
+
+  <h2 id="server">2. サーバーの設定を見直す</h2>
+  <h3>「管理者」権限を配りすぎない</h3>
+  <p>管理者権限は、サーバーのあらゆる操作ができる強い権限です。モデレーターには、メッセージの管理やメンバーのタイムアウトなど、必要な権限だけを付けましょう。</p>
+  <h3>モデレーション操作に二段階認証を必須にする</h3>
+  <p>サーバーの安全設定で、モデレーション操作に二段階認証を必須にできます。二段階認証をしていない運営メンバーが、強い操作をできないようにする設定です。</p>
+  <h3>認証レベルとAutoModを設定する</h3>
+  <p>参加したばかりのアカウントがすぐに発言できないようにする認証レベルや、怪しいリンク・スパムを自動でブロックするAutoModを設定しましょう。</p>
+  <h3>Botとウェブフックを整理する</h3>
+  <p>使っていないBotやウェブフックは削除し、残すBotにも必要な権限だけを与えます。強い権限のBotが乗っ取られると、運営アカウントと同じくらい危険です。</p>
+
+  <h2 id="scam">3. よくある乗っ取りの手口</h2>
+  <ul>
+    <li><strong>QRコードでのログイン詐欺</strong>：「認証のためにスキャンして」とQRコードを読ませ、アカウントにログインする手口</li>
+    <li><strong>偽のプレゼント・Nitroのリンク</strong>：本物そっくりのログイン画面に誘導して、パスワードを盗む手口</li>
+    <li><strong>「誤って通報してしまった」詐欺</strong>：知り合いを装って連絡し、偽のサポート担当につないで情報を聞き出す手口</li>
+    <li><strong>ファイルやツールの実行</strong>：「ゲームを試して」などと言ってファイルを実行させ、ログイン情報を盗む手口</li>
+  </ul>
+  <p>知り合いからのメッセージでも、その人のアカウント自体が乗っ取られていることがあります。いつもと違う誘いには、別の方法で本人に確認しましょう。</p>
+
+  <h2 id="hacked">4. 乗っ取られたときの対処</h2>
+  <ol>
+    <li>ログインできるうちに、すぐにパスワードを変更する（すべての端末からログアウトされます）</li>
+    <li>二段階認証を設定し直し、不審なアプリ連携を解除する</li>
+    <li>ほかの運営メンバーに連絡し、乗っ取られたアカウントのロールを外してもらう</li>
+    <li>監査ログで被害を確認し、メンバーへ注意を呼びかける</li>
+    <li>ログインできない場合は、Discordのサポートに連絡する</li>
+  </ol>
+  <p>いざというときに慌てないよう、運営メンバーの間で「乗っ取りが起きたら誰が何をするか」を決めておくと安心です。</p>
+
+  <div class="box">
+    <h2>Discordサーバーのセキュリティ診断・対策もご相談ください</h2>
+    <p>ガリバーは、管理者アカウントをSecurity Keyで守るなど、セキュリティを重視してDiscordコミュニティを運営しています。既存サーバーの権限設計の見直しや、運営体制づくりもお手伝いします。</p>
+    <a class="btn primary" href="../../#contact">無料で相談する</a>
+  </div>
+  <p style="margin-top:28px">関連記事：<a href="../discord-community/">Discordコミュニティの作り方と運営のコツ</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../../">ホーム</a> ／ <a href="../">コラム</a> ／ © 2021 ガリバー
+  </div>
+</footer>
+
+<a class="float-cta" href="../../#contact">無料で相談する</a>
+
+</body>
+</html>
