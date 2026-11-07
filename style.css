@@ -323,3 +323,20 @@ footer a { color: var(--muted); }
   .proof b { font-size: 22px; }
   .proof li { font-size: 12px; }
 }
+
+/* NG / OK comparison */
+.ngok { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+.ngok-col { border-radius: 12px; padding: 0 16px 14px; overflow: hidden; }
+.ngok-col.ng { background: #fdeceb; border: 2px solid #d9534f; }
+.ngok-col.ok { background: #e8f6ee; border: 2px solid #2e9d62; }
+.ngok-head { margin: 0 -16px 10px; padding: 8px 16px; color: #fff; font-weight: 700; font-size: 15px; }
+.ng .ngok-head { background: #d9534f; }
+.ok .ngok-head { background: #2e9d62; }
+.ngok ul { margin: 0; padding-left: 1.2em; font-size: 14px; }
+.ngok li { margin: 6px 0; line-height: 1.6; }
+.risk-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.risk-list li { background: #fdeceb; border-left: 4px solid #d9534f; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--muted); }
+.risk-list b { display: block; color: #b33a36; font-size: 15px; }
+@media (max-width: 640px) {
+  .ngok, .risk-list { grid-template-columns: 1fr; }
+}
