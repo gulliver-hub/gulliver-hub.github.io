@@ -266,8 +266,16 @@ footer a { color: var(--muted); }
 .lh-icons a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.12); color: #fff; }
 .lh-icons a:hover { background: rgba(255,255,255,.24); }
 .lh-icons svg { width: 20px; height: 20px; fill: currentColor; }
-.lh-group { background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 14px; box-shadow: 0 4px 16px rgba(18,24,33,.08); }
-.lh-group h2 { margin: 0 0 10px; font-size: 13px; letter-spacing: .1em; color: var(--accent); text-align: center; }
+.lh-group { --g: var(--accent); background: #fff; border-radius: 16px; padding: 0 16px 16px; margin-bottom: 26px; box-shadow: 0 4px 16px rgba(18,24,33,.10); overflow: hidden; border-top: 0; }
+.lh-group h2 { margin: 0 -16px 6px; padding: 12px 18px; background: var(--g); color: #fff; font-size: 16px; letter-spacing: .06em; text-align: left; display: flex; align-items: center; gap: 8px; }
+.lh-group h2::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.85); }
+.lh-group .lh-link { border-left: 4px solid var(--g); }
+.lh-group.g-biz { --g: #2f8fd0; }
+.lh-group.g-game { --g: #7c5cd6; }
+.lh-group.g-plants { --g: #2e9d62; }
+.lh-group.g-nft { --g: #1f2d3d; }
+.lh-group.g-media { --g: #d48a10; }
+.lh-group .lh-link.apps { border-left-color: var(--cta); }
 .lh-link { display: block; text-align: center; text-decoration: none; color: var(--text); font-weight: 700; font-size: 15px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 8px; transition: transform .15s, background .15s; }
 .lh-link:hover { transform: translateY(-1px); background: #e9f2fa; }
 .lh-link small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
