@@ -236,3 +236,21 @@ footer a { color: var(--muted); }
   .hero { min-height: auto; padding: 64px 0; }
   .float-cta { display: block; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 20; text-align: center; padding: 14px; border-radius: 999px; background: var(--cta); color: #1a1205; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 }
+
+/* automation recipes */
+.recipes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+.recipe { background: var(--card); border-radius: 12px; padding: 14px 16px; border-left: 4px solid var(--accent); }
+.recipe h3 { margin: 0 0 8px !important; font-size: 15px !important; }
+.recipe .mini { margin: 0; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.recipe .mini span { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--text); }
+.autoflow .node small { font-size: 11px; color: var(--muted); }
+.tips-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tips-list li { background: var(--card); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.tips-list b { display: block; color: var(--accent-dark); }
+@media (max-width: 760px) {
+  .recipes { grid-template-columns: 1fr 1fr; }
+  .tips-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .recipes { grid-template-columns: 1fr; }
+}
