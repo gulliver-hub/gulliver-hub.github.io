@@ -284,6 +284,7 @@ footer a { color: var(--muted); }
 .lh-link.apps { background: #fff8ea; border: 2px solid var(--cta); }
 .lh-link.apps b { color: var(--cta-dark); font-size: 15px; }
 .lh-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lh-pair.trio { grid-template-columns: repeat(3, 1fr); }
 .lh-foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 20px; }
 .lh-foot a { color: var(--muted); }
 .note-small { font-size: 12px; color: var(--muted); font-weight: 400; }
