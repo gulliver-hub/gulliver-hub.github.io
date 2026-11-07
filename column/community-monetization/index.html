@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>コミュニティの収益化とは？Discordで始める方法と成功のポイント｜ガリバー</title>
-<meta name="description" content="コミュニティを収益化する方法を、有料メンバーシップ・限定コンテンツ・イベント・企業とのコラボ・商品販売の5つに分けて解説。Discordでの始め方、決済サービス「Apps」とDiscordのロール連携、失敗しないための注意点も、コミュニティマネージャーのガリバーが紹介します。">
+<meta name="description" content="コミュニティを収益化する方法を、有料メンバーシップ・限定コンテンツ・イベント・企業とのコラボ・商品販売の5つに分けて解説。決済サービス「Apps」とDiscordのロール連携、有償Discordサーバーを作る5ステップ、手数料の比較（紹介で1.5％）、失敗しないための注意点も、コミュニティマネージャーのガリバーが紹介します。">
 <link rel="canonical" href="https://gulliver2021.com/column/community-monetization/">
 <meta property="og:title" content="コミュニティの収益化とは？Discordで始める方法と成功のポイント">
 <meta property="og:type" content="article">
@@ -69,6 +69,7 @@
     <li><a href="#ways">収益化の主な方法</a></li>
     <li><a href="#discord">Discordで収益化を始める流れ</a></li>
     <li><a href="#apps">決済サービス「Apps」とDiscordの連携</a></li>
+    <li><a href="#apps-steps">有償のDiscordサーバーを作るまでの5ステップ</a></li>
     <li><a href="#caution">失敗しないための注意点</a></li>
   </ol>
 
@@ -103,34 +104,114 @@
 
   <h2 id="apps">決済サービス「Apps」とDiscordの連携</h2>
   <p>Discordコミュニティの収益化で、いちばん手間がかかるのが「お金を払った人に、きちんと特典を届ける」部分です。支払いを確認して、手作業でロールを付けて、解約した人のロールを外して……と運営が一人ずつ対応していると、人数が増えるほど抜け漏れやトラブルが起きやすくなります。</p>
-  <p>そこで役に立つのが、株式会社アップスが提供する決済サービス<strong>「Apps（アップス）」</strong>です。私はこのAppsのアンバサダーを務めています。</p>
+  <p>そこで私がおすすめしているのが、株式会社アップスが提供する決済サービス<strong>「Apps（アップス）」</strong>です。これまでファンクラブ型・ナレッジ共有型・サードプレイス型・ビジネスネットワーキング型など、さまざまなDiscordサーバーの有償化をお手伝いしてきましたが、その多くでAppsとの連携を使っています。</p>
 
-  <h3>Appsでできること</h3>
-  <ul>
-    <li><strong>決済ページの作成</strong>：1回払い・分割払い・月額課金（サブスクリプション）に対応した販売ページを、プログラミングなしで作れます</li>
-    <li><strong>Discordのロール付与との連携</strong>：決済とDiscordのロール付与を連携でき、購入した人に有料メンバー用のロールを付けて、限定チャンネルを見られるようにできます</li>
-    <li><strong>会員サイト</strong>：購入者だけが見られる動画・講座・コンテンツのページを用意でき、Discordとも連携できます</li>
-    <li><strong>アフィリエイト（紹介）</strong>：紹介してくれた人に報酬を支払う仕組みを導入でき、報酬の支払い業務も任せられます</li>
-    <li><strong>オプトインアフィリエイト</strong>：商品の購入だけでなく、Discordサーバーへの参加などの無料登録も紹介の成果にできます。無料コミュニティの参加者を増やす入口づくりに使えます</li>
-  </ul>
+  <figure class="fig">
+    <div class="autoflow">
+      <div class="node">購入者が<br><b>Appsの決済ページ</b>で申し込む</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">Appsが<br>支払いを確認</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node accent">Discordの<br><b>有料会員ロールを自動で付与</b></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">限定チャンネルが<br>見られるようになる</div>
+    </div>
+    <div class="autoflow minus">
+      <div class="node">メンバーが<br><b>解約</b>する</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">Appsが<br>解約を確認</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node warn">有料会員ロールを<br><b>自動で外す</b></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">限定チャンネルが<br>見えなくなる</div>
+    </div>
+    <figcaption>図1：Appsで決済とDiscordのロールを連携したときの流れ。運営が手作業でロールを付け外しする必要がありません。</figcaption>
+  </figure>
 
-  <h3>Discordコミュニティと相性がよい理由</h3>
+  <h3>手数料は「売れたときだけ」約3.6％＋2％</h3>
+  <p>Appsは<strong>初期費用0円・月額0円</strong>。費用がかかるのは売れたときだけで、決済手数料（Stripeの場合 約3.6％）とAppsのシステム利用料（2％）の、合わせて約5.6％です。</p>
+  <p>ファンクラブ専用のプラットフォームやSNSのメンバーシップ機能では、手数料が20％以上に設定されていることも多くあります。月額1,000円のファンクラブで比べると、1人あたりの手数料は次のようになります。</p>
+
+  <figure class="fig">
+    <div class="fee-chart">
+      <div class="fee-row">
+        <div class="fee-label">手数料20％の<br>プラットフォーム</div>
+        <div class="fee-track"><div class="fee-bar gray" style="width:100%"></div></div>
+        <div class="fee-val">200円</div>
+      </div>
+      <div class="fee-row">
+        <div class="fee-label">Apps<br><small>約3.6％＋2％</small></div>
+        <div class="fee-track"><div class="fee-bar blue" style="width:28%"></div></div>
+        <div class="fee-val">約56円</div>
+      </div>
+      <div class="fee-row best">
+        <div class="fee-label">Apps（ガリバーの紹介）<br><small>約3.6％＋<b>1.5％</b></small></div>
+        <div class="fee-track"><div class="fee-bar orange" style="width:25.5%"></div></div>
+        <div class="fee-val">約51円</div>
+      </div>
+    </div>
+    <p class="fee-note">会員100人・1年間（売上120万円）なら、手数料は <b>約24万円 → 約6.1万円</b>。<br>その差 <b>約17.9万円</b> を、特典づくりや運営に回せます。</p>
+    <figcaption>図2：月額1,000円の会員1人あたりの手数料の目安（Stripeでカード決済した場合）。</figcaption>
+  </figure>
+
+  <div class="apps-bonus">
+    <p class="bonus-head">ガリバーからの紹介で、Appsのシステム利用料が</p>
+    <p class="bonus-big"><s>2％</s> → <b>1.5％</b></p>
+    <p>Appsの導入をご検討の方は、ぜひ私からの紹介でお申し込みください。決済手数料と合わせて<strong>約5.1％</strong>で、有償のDiscordサーバーを運営できます。</p>
+    <div class="links">
+      <a class="btn dark" href="https://x.com/gulliver_hub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-6.3L6.4 22H3.3l7.3-8.3L1 2h6.3l4.4 5.8L18.9 2zm-1.1 18.1h1.7L6.3 3.8H4.5l13.3 16.3z"/></svg>
+        XのDMで紹介を受ける
+      </a>
+      <a class="btn primary" href="mailto:gulliver.mcontact@gmail.com?subject=Apps%E3%81%AE%E7%B4%B9%E4%BB%8B%E5%B8%8C%E6%9C%9B">メールで相談する</a>
+    </div>
+  </div>
+
+  <h3 id="apps-steps">有償のDiscordサーバーを作るまでの5ステップ</h3>
+  <p>ここでは例として、<strong>「ファンクラブ型・月額1,000円」</strong>のDiscordサーバーをAppsで有償化する手順を紹介します。</p>
+
+  <figure class="fig">
+    <ol class="steps5">
+      <li><b>1</b><h4>Discordサーバーを作る</h4><p>有料会員だとわかる、Apps連携用のロールを用意</p></li>
+      <li><b>2</b><h4>LP（案内ページ）を公開</h4><p>Stripeの審査を通すためのページを作成</p></li>
+      <li class="long"><b>3</b><h4>Stripeを申請</h4><p>アカウントを作り、本番利用を申請。<strong>審査に時間がかかります</strong></p></li>
+      <li><b>4</b><h4>Appsで決済ページ</h4><p>「定期払い・月額1,000円」の商品を作り、決済リンクを発行</p></li>
+      <li><b>5</b><h4>Discord自動化を設定</h4><p>「購入時にロール付与」「解約時にロールを外す」を有効化</p></li>
+    </ol>
+    <div class="timeline"><span>準備期間の目安：約2か月</span></div>
+    <figcaption>図3：Appsで有償のDiscordサーバーを作るまでの流れ。</figcaption>
+  </figure>
+
+  <h4 class="step-h">① Discordサーバーを作る</h4>
+  <p>ふだんのチャンネル・ロール設計とは別に、<strong>有料会員であることがわかるApps連携用のロール</strong>（例：「ファンクラブ会員」）を用意します。限定チャンネルは、このロールを持つ人だけが見られるように設定しておきます。</p>
+  <h4 class="step-h">② LP（案内ページ）を作成・公開する</h4>
+  <p>ファンクラブの内容や料金を紹介するページを作ります。ペライチ、STUDIO、WordPress、Canvaなど、どのツールでも大丈夫です。このページは、Stripe（決済サービス）の審査を通すためにも使います。特定商取引法に基づく表記など、審査で求められる項目もあわせて載せておきましょう。</p>
+  <h4 class="step-h">③ Stripeのアカウントを開設し、申請する</h4>
+  <p>Stripeのアカウントを作成し、本番環境の利用を申請します。<strong>この審査にどうしても時間がかかる</strong>ため、早めに進めておくのがおすすめです。</p>
+  <h4 class="step-h">④ Appsで決済ページを作る</h4>
+  <p>Appsで「定期払い・月額1,000円」の商品を作成し、決済リンク（URL）を発行します。このリンクをLPやDiscordのお知らせに載せれば、申し込みを受け付けられます。</p>
+  <h4 class="step-h">⑤ Discordの自動化を設定する</h4>
+  <p>Apps側で<strong>「購入時にDiscordロールを付与」「解約時にロールを外す」</strong>のルールを有効にします。公開前に、実際に購入・解約を試して、ロールが正しく付け外しされるかを確かめておくと安心です。</p>
+  <p>ここまでの準備には、<strong>2か月ほどの期間を見ておくと安心</strong>です。Stripeの審査期間を考えて、公開日から逆算してスケジュールを立てましょう。</p>
+
+  <h3>そのほか、マーケティングに使える機能</h3>
   <ul>
-    <li><strong>固定費がかからない</strong>：初期費用・月額費用は0円で、決済があったときだけ手数料がかかる仕組みです。小さく始めたいコミュニティでも試しやすくなっています</li>
-    <li><strong>運営の手作業が減る</strong>：決済とロールが連動するので、運営は特典づくりやメンバーとの交流に集中できます</li>
-    <li><strong>無料から有料への流れを一つにまとめられる</strong>：オプトインで無料コミュニティに集め、信頼が育ったら有料メンバーシップや講座に案内する、という流れをまとめて設計できます</li>
-    <li><strong>紹介で広げられる</strong>：熱量の高いメンバーやインフルエンサーに紹介してもらうことで、広告に頼らずにメンバーを増やせます</li>
+    <li><strong>紹介アフィリエイト</strong>：ファンクラブを紹介してくれた人に報酬を支払う仕組みを設定でき、支払い業務も任せられます</li>
+    <li><strong>オプトインアフィリエイト</strong>：Discordサーバーへの参加などの無料登録も紹介の成果にでき、無料コミュニティの入口づくりに使えます</li>
+    <li><strong>金額に応じたプラン設計</strong>：ライト・スタンダード・プレミアムのように、金額ごとに特典やロールを分けたプランを作れます</li>
+    <li><strong>顧客管理</strong>：会員の申し込み・継続・解約の状況をまとめて管理できます</li>
+    <li><strong>会員サイト</strong>：購入者だけが見られる動画・講座のページも用意できます</li>
   </ul>
 
   <h3>導入するときのポイント</h3>
   <ul>
     <li>有料ロールで見られるチャンネルと、無料メンバーが見られるチャンネルを先に設計しておく</li>
-    <li>月額課金の場合は、支払いが止まったときや解約したときのロールの扱いも、あらかじめ確認・テストしておく</li>
-    <li>Discordのサーバー設定で、Bot（連携用アプリ）のロールを、付与したい有料ロールより上に置く</li>
-    <li>手数料や対応している決済方法は変わることがあるため、<a href="https://theapps.jp/" target="_blank" rel="noopener">Appsの公式サイト</a>で最新の情報を確認する</li>
+    <li>Discordのサーバー設定で、連携用アプリ（Bot）のロールを、付与したい有料ロールより上に置く</li>
+    <li>公開前に、購入と解約をテストして、ロールの付け外しを確かめる</li>
+    <li>手数料や対応している決済方法は変わることがあるため、<a href="https://theapps.jp/pricing" target="_blank" rel="noopener">Appsの料金ページ</a>で最新の情報を確認する</li>
   </ul>
-  <p>「どのロールを有料にするか」「無料と有料で何を分けるか」は、コミュニティの目的によって変わります。Appsの導入とDiscordサーバーの設計をあわせてご相談いただくことも可能です。</p>
-  <p style="font-size:14px;color:var(--muted)">※筆者（ガリバー）は決済サービス「Apps」のアンバサダーを務めています。</p>
+  <p>「どのロールを有料にするか」「無料と有料で何を分けるか」は、コミュニティの目的によって変わります。Appsの導入とDiscordサーバーの設計を、まとめてお手伝いすることもできます。ご興味がある方は、ぜひXのDMでご連絡ください。</p>
+  <p style="font-size:14px;color:var(--muted)">※筆者（ガリバー）は決済サービス「Apps」のアンバサダーを務めています。手数料は2026年11月時点の目安です。</p>
 
   <h2 id="caution">失敗しないための注意点</h2>
   <ul>
@@ -143,7 +224,7 @@
 
   <div class="box">
     <h2>コミュニティの収益化をご相談ください</h2>
-    <p>ガリバーは、Discordのコミュニティマネージャーとして、サーバーの構築・運営から、有料メンバーシップの設計、コミュニティを起点にしたPR活動までお手伝いしています。決済サービス「Apps」のアンバサダーも務めています。</p>
+    <p>ガリバーは、Discordのコミュニティマネージャーとして、サーバーの構築・運営から、有料メンバーシップの設計、コミュニティを起点にしたPR活動までお手伝いしています。決済サービス「Apps」のアンバサダーとして、私からの紹介ならAppsのシステム利用料が1.5％になります。</p>
     <a class="btn primary" href="../../#contact">無料で相談する</a>
   </div>
   <p style="margin-top:28px">関連記事：<a href="../community-manager/">コミュニティマネージャーとは？仕事内容と必要なスキル</a></p>
