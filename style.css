@@ -193,6 +193,7 @@ footer a { color: var(--muted); }
 .price-card .pc-tag { display: inline-block; margin: 0 0 8px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; }
 .price-card .pc-price { margin: 0; color: var(--muted); }
 .price-card .pc-price b { font-size: 34px; color: var(--accent-dark); }
+.price-card .pc-price small { font-size: 12px; margin-left: 2px; }
 .price-card .pc-sub { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
 .price-card ul { margin: 10px 0 0; padding-left: 1.2em; font-size: 14px; }
 .price-card li { margin: 4px 0; }
