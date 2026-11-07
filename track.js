@@ -14,3 +14,18 @@ document.addEventListener('click', function (e) {
     page_path: location.pathname
   });
 });
+
+// Mobile menu: open/close the nav with the hamburger button.
+(function () {
+  var btn = document.querySelector('.menu-toggle');
+  if (!btn) return;
+  var bar = btn.closest('.topbar');
+  function set(open) {
+    bar.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  }
+  btn.addEventListener('click', function () { set(!bar.classList.contains('open')); });
+  bar.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
