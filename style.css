@@ -278,3 +278,4 @@ footer a { color: var(--muted); }
 .lh-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .lh-foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 20px; }
 .lh-foot a { color: var(--muted); }
+.note-small { font-size: 12px; color: var(--muted); font-weight: 400; }
