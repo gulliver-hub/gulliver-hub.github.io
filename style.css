@@ -317,3 +317,9 @@ footer a { color: var(--muted); }
   .topbar.open .menu a:not(.cta-small) { display: block; padding: 14px 4px; font-size: 16px; color: #fff; border-bottom: 1px solid rgba(255,255,255,.1); }
   .topbar.open .menu .cta-small { margin-top: 16px; padding: 12px; text-align: center; font-size: 16px; }
 }
+.topbar.open .menu-toggle { margin-left: auto; }
+@media (max-width: 760px) {
+  .proof { gap: 18px; margin-top: 28px; }
+  .proof b { font-size: 22px; }
+  .proof li { font-size: 12px; }
+}
