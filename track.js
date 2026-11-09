@@ -15,6 +15,31 @@ document.addEventListener('click', function (e) {
   });
 });
 
+// Header: add the service page links under "サービス" on every page.
+(function () {
+  var link = document.querySelector('.menu a[href="/#service"]');
+  if (!link) return;
+  var items = [
+    ['/discord-server-build/', '構築代行'],
+    ['/discord-community-management/', '運営代行'],
+    ['/discord-server-maintenance/', 'サーバー保守']
+  ];
+  var wrap = document.createElement('div');
+  wrap.className = 'menu-dd';
+  link.parentNode.insertBefore(wrap, link);
+  wrap.appendChild(link);
+  var sub = document.createElement('div');
+  sub.className = 'menu-sub';
+  items.forEach(function (it) {
+    var a = document.createElement('a');
+    a.href = it[0];
+    a.textContent = it[1];
+    if (location.pathname === it[0]) a.setAttribute('aria-current', 'page');
+    sub.appendChild(a);
+  });
+  wrap.appendChild(sub);
+})();
+
 // Mobile menu: open/close the nav with the hamburger button.
 (function () {
   var btn = document.querySelector('.menu-toggle');
