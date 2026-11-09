@@ -6,6 +6,7 @@ document.addEventListener('click', function (e) {
   var name = null, method = null;
   if (href.indexOf('mailto:') === 0) { name = 'contact_click'; method = 'email'; }
   else if (/^https:\/\/(x|twitter)\.com\/gulliver_hub/.test(href)) { name = 'contact_click'; method = 'x'; }
+  else if (href.indexOf('discord.gg/FJBrazDP6e') !== -1) { name = 'contact_click'; method = 'discord'; }
   else if (href.indexOf('page.theapps.jp/signup') !== -1) { name = 'apps_referral_click'; method = 'apps'; }
   if (!name) return;
   gtag('event', name, {

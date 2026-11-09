@@ -363,3 +363,7 @@ html { scrollbar-gutter: stable; }
   .topbar.open .menu .menu-sub a:not(.cta-small) { padding-left: 22px; font-size: 15px; color: #c9d4df; }
   .topbar.open .menu .menu-sub a[aria-current="page"]:not(.cta-small) { color: var(--cta); }
 }
+
+/* Discord contact button */
+.btn.discord { background: #5865f2; color: #fff; }
+.btn.discord:hover { background: #4752c4; }
