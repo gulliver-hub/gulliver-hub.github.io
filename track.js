@@ -40,6 +40,17 @@ document.addEventListener('click', function (e) {
   wrap.appendChild(sub);
 })();
 
+// Footer: link the commerce disclosure page on every page that has a footer.
+(function () {
+  var wrap = document.querySelector('footer .wrap');
+  if (!wrap || wrap.querySelector('a[href*="tokushoho"]')) return;
+  var a = document.createElement('a');
+  a.href = '/tokushoho/';
+  a.textContent = '特定商取引法に基づく表記';
+  wrap.insertBefore(document.createTextNode(' ／ '), wrap.firstChild);
+  wrap.insertBefore(a, wrap.firstChild);
+})();
+
 // Mobile menu: open/close the nav with the hamburger button.
 (function () {
   var btn = document.querySelector('.menu-toggle');
