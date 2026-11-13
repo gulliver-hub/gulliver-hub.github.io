@@ -59,7 +59,7 @@ img { max-width: 100%; display: block; }
 /* sections */
 section.block { padding: 80px 0; }
 .label { color: var(--accent-dark); font-weight: 700; letter-spacing: .15em; font-size: 14px; margin: 0; }
-.label.light { color: #d6ecfb; }
+.label.light { color: #fff; }
 h2.title { margin: 4px 0 32px; font-size: 28px; line-height: 1.4; }
 
 /* service cards */
@@ -76,7 +76,7 @@ h2.title { margin: 4px 0 32px; font-size: 28px; line-height: 1.4; }
 .message figcaption { margin-top: 10px; font-size: 14px; line-height: 1.5; }
 .message h2 { margin: 4px 0 16px; font-size: 32px; font-weight: 500; }
 .message p { margin: 0 0 12px; }
-.message .note { margin-top: 20px; padding: 14px 18px; background: rgba(255,255,255,.14); border-radius: 8px; font-size: 15px; }
+.message .note { margin-top: 20px; padding: 14px 18px; background: rgba(0,0,0,.22); border-radius: 8px; font-size: 15px; }
 
 /* works */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -367,3 +367,8 @@ html { scrollbar-gutter: stable; }
 /* Discord contact button */
 .btn.discord { background: #5865f2; color: #fff; }
 .btn.discord:hover { background: #4752c4; }
+
+/* phones: draw the hero with a gradient instead of the dimmed photo, so the first screen appears quickly */
+@media (max-width: 760px) {
+  .hero { background: radial-gradient(120% 80% at 85% 0%, rgba(47,143,208,.35), transparent 60%), linear-gradient(160deg, #1b2533 0%, #0f141b 70%); }
+}
