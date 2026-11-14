@@ -281,6 +281,9 @@ footer a { color: var(--muted); }
 .lh-link small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
 .lh-link.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .lh-link.primary small { color: #d6ecfb; }
+.g-plants .lh-link.primary { background: var(--g); border-color: var(--g); }
+.g-plants .lh-link.primary:hover { background: #278a55; }
+.g-plants .lh-link.primary small { color: #dcf3e6; }
 .lh-link.apps { background: #fff8ea; border: 2px solid var(--cta); }
 .lh-link.apps b { color: var(--cta-dark); font-size: 15px; }
 .lh-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
