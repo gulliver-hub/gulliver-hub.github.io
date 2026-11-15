@@ -8,6 +8,7 @@ document.addEventListener('click', function (e) {
   else if (/^https:\/\/(x|twitter)\.com\/gulliver_hub/.test(href)) { name = 'contact_click'; method = 'x'; }
   else if (href.indexOf('discord.gg/FJBrazDP6e') !== -1) { name = 'contact_click'; method = 'discord'; }
   else if (href.indexOf('page.theapps.jp/signup') !== -1) { name = 'apps_referral_click'; method = 'apps'; }
+  else if (href.indexOf('https://gdots.jp') === 0) { name = 'gdots_click'; method = 'gdots'; }
   if (!name) return;
   gtag('event', name, {
     method: method,

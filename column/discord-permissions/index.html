@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-RK8TQB32ZZ";document.head.appendChild(s);});</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RK8TQB32ZZ');
+</script>
+<script src="../../track.js?v=3" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discordの危ない権限設定7選｜乗っ取り・荒らしの被害を広げないチェック方法｜ガリバー</title>
+<meta name="description" content="「管理者」の配りすぎ、@everyoneの強い権限、ウェブフック、Botのロールの位置……。Discordサーバーで乗っ取りや荒らしの被害を広げてしまう危ない権限設定7つと、確認・修正の方法を、Discordコミュニティマネージャーのガリバーが図解します。">
+<link rel="canonical" href="https://gulliver2021.com/column/discord-permissions/">
+<meta property="og:title" content="Discordの危ない権限設定7選｜乗っ取り・荒らしの被害を広げないチェック方法">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gulliver2021.com/column/discord-permissions/">
+<meta property="og:image" content="https://gulliver2021.com/images/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gulliver_hub">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="../../style.css?v=20261115a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Discordの危ない権限設定7選｜乗っ取り・荒らしの被害を広げないチェック方法",
+      "datePublished": "2026-11-15",
+      "dateModified": "2026-11-15",
+      "inLanguage": "ja",
+      "image": "https://gulliver2021.com/images/ogp.jpg",
+      "mainEntityOfPage": "https://gulliver2021.com/column/discord-permissions/",
+      "author": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）", "url": "https://gulliver2021.com/"},
+      "publisher": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://gulliver2021.com/"},
+        {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://gulliver2021.com/column/"},
+        {"@type": "ListItem", "position": 3, "name": "Discordの危ない権限設定7選", "item": "https://gulliver2021.com/column/discord-permissions/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">ガリバー</a>
+    <div class="menu">
+      <a href="/#service">サービス</a>
+      <a href="/price/">料金</a>
+      <a href="/#works">実績</a>
+      <a href="/#flow">ご相談の流れ</a>
+      <a href="/column/" aria-current="page">コラム</a>
+      <a class="cta-small" href="/#contact">無料で相談する</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
+<main class="article">
+  <p class="crumb"><a href="../../">ホーム</a> ＞ <a href="../">コラム</a> ＞ Discordの危ない権限設定7選</p>
+  <h1>Discordの危ない権限設定7選<br>乗っ取り・荒らしの被害を広げないチェック方法</h1>
+  <p class="meta">2026年11月15日 ／ 執筆：ガリバー（Discordコミュニティマネージャー）</p>
+
+  <p>運営メンバーのアカウントが乗っ取られたり、荒らしが入ってきたりしたとき、被害の大きさを決めるのは<strong>「その人やBotに、どこまでの権限があったか」</strong>です。50以上のサーバーを運営してきた中で、特に見直してほしい設定を7つにまとめました。</p>
+
+  <figure class="fig">
+    <div class="autoflow">
+      <div class="node"><span><b>乗っ取り・荒らし</b><br><small>きっかけ</small></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node warn"><span><b>強すぎる権限</b><br><small>被害が広がる</small></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node"><span>チャンネル削除・<br>一斉メンション・詐欺投稿</span></div>
+    </div>
+    <figcaption>権限を必要な分だけにしておけば、万一のときも被害を小さく抑えられます</figcaption>
+  </figure>
+
+  <h2>見直してほしい権限設定7選</h2>
+  <ol class="perm-list">
+    <li><b>「管理者」を配りすぎている</b><span class="risk">乗っ取られると、サーバーのすべてを操作されます。</span><span class="fix">オーナーと少数の責任者だけに。モデレーターには必要な権限だけを付ける</span></li>
+    <li><b>@everyone に強い権限が付いている</b><span class="risk">参加したばかりの人や荒らしにも、その権限が渡ります。</span><span class="fix">@everyone は「見る・話す」程度にとどめる</span></li>
+    <li><b>「@everyone・@here・全てのロールにメンション」を一般メンバーに許可</b><span class="risk">一斉通知でスパムや詐欺リンクが全員に届きます。</span><span class="fix">運営だけに許可する</span></li>
+    <li><b>「ウェブフックの管理」を広く渡している</b><span class="risk">公式のお知らせのふりをした詐欺投稿に悪用されます。</span><span class="fix">運営の一部だけに。使っていないウェブフックは削除</span></li>
+    <li><b>「ロールの管理」「チャンネルの管理」を持つ人が多い</b><span class="risk">ロールの付け替えやチャンネルの削除で、サーバーの構造を壊されます。</span><span class="fix">担当者を絞り、必要な期間だけ付ける</span></li>
+    <li><b>Botに強い権限があり、ロールの位置も高い</b><span class="risk">Botが乗っ取られたり不具合を起こしたりすると、運営と同じだけの被害が出ます。</span><span class="fix">Botは必要な権限だけにし、ロールの並び順も必要な位置まで下げる</span></li>
+    <li><b>モデレーションの二段階認証・認証レベルが未設定</b><span class="risk">パスワードだけで強い操作ができ、捨てアカウントもすぐ発言できます。</span><span class="fix">サーバー設定で、モデレーション操作の二段階認証と、参加者の認証レベルを設定する</span></li>
+  </ol>
+
+  <h2>手作業で確認するときのポイント</h2>
+  <ul class="tips-list">
+    <li><b>ロールを1つずつ開く</b>サーバー設定 → ロールで、強い権限が付いていないか確認</li>
+    <li><b>チャンネルの上書き設定も見る</b>チャンネルごとの設定で、権限が足されていることがあります</li>
+    <li><b>ロールの並び順を見る</b>上にあるロールほど強いので、Botや一般向けロールの位置に注意</li>
+    <li><b>定期的に見直す</b>運営メンバーの交代やBotの追加のたびに確認</li>
+  </ul>
+  <p>ロールやチャンネルが多いサーバーでは、すべてを手で確認するのは大変です。見落としが一番起きやすいのが、チャンネルごとの上書き設定です。</p>
+
+  <aside class="gdots-box" aria-label="GDots のご案内">
+    <p class="gdots-kicker">GDots｜Discord 権限チェックツール</p>
+    <p class="gdots-head">この記事のチェックを、数十秒で</p>
+    <p>ここで紹介したような危ない設定は、自社開発ツール「GDots」でまとめてチェックできます。100点満点で採点され、直したい項目はボタンひとつで修正できます。</p>
+    <ul class="gdots-points"><li>各サーバー7日間無料</li><li>カード登録なし・自動で有料にならない</li><li>その後は月480円（税込）</li></ul>
+    <a class="btn primary" href="https://gdots.jp/?utm_source=gulliver2021&amp;utm_medium=referral&amp;utm_campaign=col-permissions" target="_blank" rel="noopener">GDots で無料チェック →</a>
+  </aside>
+
+  <div class="box">
+    <h2>権限の設計から任せたい方へ</h2>
+    <p>ロールや権限の設計の見直し、運営体制づくり、スキャムや荒らしへの対応まで、サーバー保守としてお手伝いします。ご相談・診断は無料です。</p>
+    <div class="links" style="justify-content:flex-start">
+      <a class="btn primary" href="/contact/">無料で相談する</a>
+      <a class="btn dark" href="/discord-server-maintenance/">サーバー保守を見る</a>
+    </div>
+  </div>
+
+  <p style="margin-top:20px">関連記事：<a href="../discord-security/">Discordサーバーの乗っ取り対策</a>／<a href="../discord-rules/">Discordの規約違反になりやすい施策</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../../">ホーム</a> ／ <a href="../../price/">料金</a> ／ <a href="../">コラム</a> ／ <a href="../../privacy/">プライバシーポリシー</a> ／ <a href="https://gdots.jp" target="_blank" rel="noopener">GDots（Discord 権限チェックツール）</a> ／ © 2021 ガリバー
+  </div>
+</footer>
+
+<a class="float-cta" href="../../#contact">無料で相談する</a>
+
+</body>
+</html>

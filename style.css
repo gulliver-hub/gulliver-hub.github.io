@@ -375,3 +375,20 @@ html { scrollbar-gutter: stable; }
 @media (max-width: 760px) {
   .hero { background: radial-gradient(120% 80% at 85% 0%, rgba(47,143,208,.35), transparent 60%), linear-gradient(160deg, #1b2533 0%, #0f141b 70%); }
 }
+
+/* GDots promo box (in articles and service pages) */
+.gdots-box { margin: 32px 0; padding: 22px 24px; border-radius: 14px; background: linear-gradient(160deg, #1b2533, #0f141b); color: #e8eef5; }
+.gdots-box p { margin: 0 0 10px; }
+.gdots-kicker { font-size: 12px; letter-spacing: .08em; color: #9fd0f3; font-weight: 700; }
+.gdots-head { font-size: 20px; font-weight: 700; color: #fff; line-height: 1.4; }
+.gdots-points { list-style: none; padding: 0; margin: 4px 0 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+.gdots-points li { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; }
+
+/* numbered permission checklist */
+.perm-list { list-style: none; padding: 0; margin: 12px 0; counter-reset: perm; display: grid; gap: 10px; }
+.perm-list li { counter-increment: perm; position: relative; background: var(--card); border-radius: 12px; padding: 14px 16px 14px 58px; }
+.perm-list li::before { content: counter(perm); position: absolute; left: 14px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: #d9534f; color: #fff; font-weight: 700; display: grid; place-items: center; }
+.perm-list b { display: block; font-size: 16px; line-height: 1.5; }
+.perm-list .risk { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.perm-list .fix { display: block; font-size: 14px; margin-top: 6px; color: #1f7a4a; font-weight: 700; }
+.perm-list .fix::before { content: "対策：" ; }
