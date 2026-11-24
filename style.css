@@ -197,6 +197,9 @@ footer a { color: var(--muted); }
 .price-card .pc-sub { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
 .price-card ul { margin: 10px 0 0; padding-left: 1.2em; font-size: 14px; }
 .price-card li { margin: 4px 0; }
+/* small note under a card title, e.g. 運営代行（コミュニティマネージャー業務） */
+.h3-note { display: block; margin-top: 2px; font-size: 13px; line-height: 1.5; font-weight: 700; color: var(--muted); letter-spacing: 0; }
+@media (min-width: 901px) { .price-cards.three .price-card h3 { min-height: 56px; } }
 
 /* floating call-to-action (shown on phones) */
 .float-cta { display: none; }
