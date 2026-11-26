@@ -200,6 +200,12 @@ footer a { color: var(--muted); }
 /* small note under a card title, e.g. 運営代行（コミュニティマネージャー業務） */
 .h3-note { display: block; margin-top: 2px; font-size: 13px; line-height: 1.5; font-weight: 700; color: var(--muted); letter-spacing: 0; }
 @media (min-width: 901px) { .price-cards.three .price-card h3 { min-height: 56px; } }
+/* 料金ページの依頼例：合計を下にそろえる */
+.price-cards.examples .price-card { display: flex; flex-direction: column; }
+.price-cards.examples .pc-tag { align-self: flex-start; }
+.price-cards.examples .price-card .fine { margin: 10px 0 14px; }
+.price-card .ex-total { margin: auto 0 6px; padding: 10px 12px; background: #fff; border-radius: 10px; font-size: 14px; line-height: 1.8; color: var(--muted); }
+.price-card .ex-total b { font-size: 20px; color: var(--accent-dark); }
 
 /* floating call-to-action (shown on phones) */
 .float-cta { display: none; }
