@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-RK8TQB32ZZ";document.head.appendChild(s);});</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RK8TQB32ZZ');
+</script>
+<script src="../../track.js?v=3" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discordのサーバー管理はBotひとつで｜GDotsでできること・料金・自分で設定するか任せるかの選び方｜ガリバー</title>
+<meta name="description" content="荒らし対策・ログ・チケット・SNSの通知・予約投稿……Botを何個も入れていませんか？自社開発のDiscord管理Bot「GDots」でできること、Free・Standard・Proの料金、自分で設定する方法、開発者が使うメリット、保守を任せる選択肢まで、Discordコミュニティマネージャーのガリバーが図解します。">
+<link rel="canonical" href="https://gulliver2021.com/column/gdots/">
+<meta property="og:title" content="Discordのサーバー管理はBotひとつで｜GDotsでできること・料金・選び方">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gulliver2021.com/column/gdots/">
+<meta property="og:image" content="https://gulliver2021.com/images/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gulliver_hub">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png?v=4">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png?v=4">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=4">
+<link rel="stylesheet" href="../../style.css?v=20261126a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Discordのサーバー管理はBotひとつで｜GDotsでできること・料金・自分で設定するか任せるかの選び方",
+      "datePublished": "2026-11-28",
+      "dateModified": "2026-11-28",
+      "inLanguage": "ja",
+      "image": "https://gulliver2021.com/images/ogp.jpg",
+      "mainEntityOfPage": "https://gulliver2021.com/column/gdots/",
+      "author": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）", "url": "https://gulliver2021.com/"},
+      "publisher": {"@type": "Person", "@id": "https://gulliver2021.com/#person", "name": "ガリバー（坂口 翔太）"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://gulliver2021.com/"},
+        {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://gulliver2021.com/column/"},
+        {"@type": "ListItem", "position": 3, "name": "Discordのサーバー管理はBotひとつで（GDots）", "item": "https://gulliver2021.com/column/gdots/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "GDotsは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。権限チェック・AutoMod・ハニーポット・連投検知・つながる守り・処罰など、サーバーを守る機能は永久無料です。お支払い情報の登録もいりません。イベントログの全部の記録・予約投稿・レポート・翻訳などは、1サーバー月480円（税込）のStandardプランです。"}},
+        {"@type": "Question", "name": "ガリバーに依頼しないと使えませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。GDotsはどなたでもご自身で使えます。gdots.jp からDiscordでログインし、Botをサーバーに入れるだけで始められます。"}},
+        {"@type": "Question", "name": "保守を依頼するとGDotsの料金はどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "サーバー保守をご依頼いただいている期間は、GDotsのProプラン（通常1サーバー月2,980円）を保証します。GDotsの料金を別にお支払いいただく必要はありません。"}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">ガリバー</a>
+    <div class="menu">
+      <a href="/#service">サービス</a>
+      <a href="/price/">料金</a>
+      <a href="/#works">実績</a>
+      <a href="/#flow">ご相談の流れ</a>
+      <a href="/column/" aria-current="page">コラム</a>
+      <a class="cta-small" href="/#contact">無料で相談する</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
+<main class="article">
+  <p class="crumb"><a href="../../">ホーム</a> ＞ <a href="../">コラム</a> ＞ Discordのサーバー管理はBotひとつで（GDots）</p>
+  <h1>Discordのサーバー管理はBotひとつで<br>GDotsでできること・料金・選び方</h1>
+  <p class="meta">2026年11月28日 ／ 執筆：ガリバー（Discordコミュニティマネージャー・GDots 開発者）</p>
+
+  <p>荒らし対策のBot、ログのBot、チケットのBot、YouTubeの通知のBot……。サーバーが大きくなるほど、Botが増えていきます。Botが増えるほど、<strong>権限の穴も、設定する画面も、止まったときの原因探しも増えます。</strong></p>
+  <p>50以上のサーバーを運営してきた中で「これを1つにまとめたい」と思って自分で作ったのが、Discordのサーバー管理Bot<strong>「GDots（ジードッツ）」</strong>です。この記事では、GDotsでできること、料金、そして<strong>自分で設定するか、プロに任せるか</strong>の選び方を正直にまとめます。</p>
+
+  <ol class="toc">
+    <li><a href="#one-bot">Botを1つにまとめると、なにがよいか</a></li>
+    <li><a href="#features">GDotsでできること</a></li>
+    <li><a href="#plans">料金（Free・Standard・Pro）</a></li>
+    <li><a href="#choose">3つの使い方と選び方</a></li>
+    <li><a href="#self">自分で始める手順</a></li>
+    <li><a href="#dev">開発者・運営代行の方が GDots で設定するメリット</a></li>
+    <li><a href="#maintenance">保守を任せる場合（Pro プランを保証）</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+  </ol>
+
+  <h2 id="one-bot">Botを1つにまとめると、なにがよいか</h2>
+  <figure class="fig">
+    <div class="ngok">
+      <div class="ngok-col ng">
+        <p class="ngok-head" style="background:#d9534f">Botが5つ・6つのサーバー</p>
+        <ul class="tips-list">
+          <li><b>強い権限のBotが何個もある</b>1つ乗っ取られるだけで、サーバー全体が危なくなる</li>
+          <li><b>設定の画面がバラバラ</b>どこで何を設定したか、運営どうしで分からなくなる</li>
+          <li><b>止まったときに原因が分からない</b>どのBotのせいか調べるだけで時間がかかる</li>
+          <li><b>料金もバラバラ</b>それぞれの有料プランが少しずつかかる</li>
+        </ul>
+      </div>
+      <div class="ngok-col ok">
+        <p class="ngok-head" style="background:#2e9d62">GDots ひとつのサーバー</p>
+        <ul class="tips-list">
+          <li><b>強い権限のBotが1つだけ</b>権限の点検もGDots自身がしてくれる</li>
+          <li><b>管理画面は1つ</b>ブラウザで、運営みんなが同じ画面を見られる</li>
+          <li><b>記録が1か所に残る</b>だれが・いつ・なにをしたかを追える</li>
+          <li><b>守る機能は永久無料</b>便利な機能も1サーバー月480円から</li>
+        </ul>
+      </div>
+    </div>
+    <figcaption>Botの数を減らすことは、そのまま乗っ取り・荒らし対策になります</figcaption>
+  </figure>
+
+  <h2 id="features">GDotsでできること</h2>
+  <p>管理画面はブラウザで開き、Discordのアカウントでログインするだけです。機能は大きく6つのグループに分かれています。</p>
+  <div class="cards three" style="margin:20px 0">
+    <div class="card"><h3>🛡️ 荒らし対策</h3><p>AutoMod（高・中・低の型から）・ハニーポット（罠チャンネル）・連投と乗っ取りの検知・つながる守り・処罰（KICK・BAN・タイムアウト）</p></div>
+    <div class="card"><h3>🩺 権限チェック</h3><p>ロールとチャンネルの権限を14項目でチェックし、100点満点で採点。危ない設定はボタンひとつで直せます</p></div>
+    <div class="card"><h3>🗺️ ロール・チャンネル</h3><p>権限マップ（ロール×チャンネルを1枚の表で）・権限セット・一括適用・ロールの一括付与・棚卸し・バックアップ</p></div>
+    <div class="card"><h3>📝 ログ・レポート</h3><p>イベントログ・操作ログ・期間ごとのレポート（PDF）・メッセージの書き出し（CSV）</p></div>
+    <div class="card"><h3>👋 コミュニティ</h3><p>チケット・ウェルカムカード・ロールパネル・レベル・ポイント・代理投稿と予約投稿・固定メッセージ・日程調整・翻訳チャンネル</p></div>
+    <div class="card"><h3>📺 SNS の通知</h3><p>YouTube・X・Bluesky・Twitch・ツイキャス・note・RSS の新しい投稿や配信を Discord へ</p></div>
+  </div>
+  <p>Botを入れた直後には、いくつかの質問に答えるだけで、チャンネルやカテゴリ、ルール・お知らせ・ようこそのチャンネルまで整えてくれる<strong>「サーバーの初期設定」</strong>も使えます（使わなくてもかまいません）。</p>
+
+  <figure class="fig">
+    <p class="fig-title">GDots の「守り」は、入口から記録までつながっています</p>
+    <div class="autoflow">
+      <div class="node"><span><b>入ってくる</b><br><small>つながる守りで<br>要注意の人を知らせる</small></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node"><span><b>投稿する</b><br><small>AutoMod・連投検知・<br>ハニーポットで止める</small></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node"><span><b>処罰する</b><br><small>理由と証拠を付けて<br>KICK・BAN</small></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node accent"><span><b>記録に残る</b><br><small>イベントログ・<br>レポート</small></span></div>
+    </div>
+    <figcaption>「つながる守り」は、ほかの GDots のサーバーで荒らしとして止められた人が入ってきたら知らせる機能です。使うサーバーが増えるほど強くなります</figcaption>
+  </figure>
+
+  <h2 id="plans">料金（Free・Standard・Pro）</h2>
+  <p>料金はサーバーごとです。<strong>サーバーを守る機能は、ずっと無料</strong>で使えます。</p>
+  <div class="price-cards three" style="margin:20px 0">
+    <div class="price-card light">
+      <span class="pc-tag" style="background:#9aa4b1">まずはここから</span>
+      <h3>Free プラン</h3>
+      <p class="pc-price"><b>0</b>円</p>
+      <p class="pc-sub">お支払い情報の登録なし</p>
+      <ul>
+        <li>権限チェック（手で実行）・権限マップ・権限セット・一括適用</li>
+        <li>AutoMod・ハニーポット・連投検知・つながる守り・処罰</li>
+        <li>ウェルカム・ロールパネル・レベル</li>
+        <li>チケット（1種類）・SNS の通知（1つ）・固定メッセージ（1つ）など</li>
+      </ul>
+    </div>
+    <div class="price-card main">
+      <span class="pc-tag">運営を楽にする</span>
+      <h3>Standard プラン</h3>
+      <p class="pc-price"><b>480</b>円<small>／月・税込</small></p>
+      <p class="pc-sub">1サーバーあたり</p>
+      <ul>
+        <li>イベントログ（全部の記録）</li>
+        <li>定期の権限チェック・毎日の自動バックアップ</li>
+        <li>期間レポート・メッセージの書き出し</li>
+        <li>予約投稿・くり返し投稿</li>
+        <li>チケットの全部・SNS の通知（2つ目から・X）</li>
+        <li>ポイント・Bot の見た目・翻訳・AI のまとめ</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <span class="pc-tag" style="background:var(--cta-dark)">たくさん使うサーバーに</span>
+      <h3>Pro プラン</h3>
+      <p class="pc-price"><b>2,980</b>円<small>／月・税込</small></p>
+      <p class="pc-sub">1サーバーあたり</p>
+      <ul>
+        <li>Standard の全部</li>
+        <li>翻訳 月5万件（Standard は月300件）</li>
+        <li>X の通知 10アカウント・1日30件</li>
+        <li>AI のまとめ 月50回（Standard は月5回）</li>
+        <li>ほしい機能・使い方を運営に直接相談できる</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine" style="font-size:13px;color:var(--muted)">料金と機能の分け方は 2026年11月28日 時点のものです。最新の内容は <a href="https://gdots.jp/?utm_source=gulliver2021&amp;utm_medium=referral&amp;utm_campaign=col-gdots" target="_blank" rel="noopener">gdots.jp</a> でご確認ください。</p>
+
+  <h2 id="choose">3つの使い方と選び方</h2>
+  <p>GDots は、ガリバーに依頼しなくても使えます。どれを選んでも、使う GDots は同じです。</p>
+  <div class="price-cards three examples" style="margin:20px 0">
+    <div class="price-card light">
+      <span class="pc-tag" style="background:#9aa4b1">A. 自分で使う</span>
+      <h3>GDots だけで運営する</h3>
+      <p class="pc-sub">自分のサーバーを自分で守りたい方</p>
+      <ul>
+        <li>Free プランで今すぐ始められる</li>
+        <li>権限チェックの点数を見ながら、自分のペースで直せる</li>
+        <li>必要になったら Standard・Pro へ</li>
+      </ul>
+      <p class="ex-total">費用：<b>0円〜</b></p>
+    </div>
+    <div class="price-card">
+      <span class="pc-tag">B. 開発者・代行の方</span>
+      <h3>お客様のサーバーを GDots で設定する</h3>
+      <p class="pc-sub">Bot 開発者・運営代行・制作会社の方</p>
+      <ul>
+        <li>自分で Bot を作って動かし続ける手間がいらない</li>
+        <li>型（権限セット）を作って、何サーバーにも同じ設定</li>
+        <li>レポートを PDF でお客様に渡せる</li>
+      </ul>
+      <p class="ex-total">費用：<b>0円〜</b><br><small>（お客様のサーバーごとのプラン）</small></p>
+    </div>
+    <div class="price-card main">
+      <span class="pc-tag" style="background:var(--cta-dark)">C. ガリバーに任せる</span>
+      <h3>保守を依頼する</h3>
+      <p class="pc-sub">手が回らない・プロに見てほしい方</p>
+      <ul>
+        <li>設定も見守りも、荒らしへの対応もおまかせ</li>
+        <li><b>保守期間中は GDots の Pro プランを保証</b></li>
+        <li>運営代行と組み合わせることもできる</li>
+      </ul>
+      <p class="ex-total">費用：<b>月33,000円〜</b><br><small>（GDots の料金は別にかかりません）</small></p>
+    </div>
+  </div>
+
+  <figure class="fig">
+    <p class="fig-title">迷ったら、この順に考えてみてください</p>
+    <div class="autoflow">
+      <div class="node"><span>設定や見守りに<br><b>自分の時間をかけられる？</b></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node accent"><span><b>はい</b><br><small>A. まず Free で試す</small></span></div>
+    </div>
+    <div class="autoflow">
+      <div class="node"><span><b>お客様のサーバー</b>を<br>任されている？</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node accent"><span><b>はい</b><br><small>B. GDots で設定して納品</small></span></div>
+    </div>
+    <div class="autoflow">
+      <div class="node"><span>時間がない・<br><b>荒らしが心配</b></span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node accent"><span><b>はい</b><br><small>C. 保守をガリバーに依頼</small></span></div>
+    </div>
+    <figcaption>A から始めて、あとから C に切り替えることもできます。設定はそのまま引き継げます</figcaption>
+  </figure>
+
+  <h2 id="self">自分で始める手順</h2>
+  <ol class="steps5">
+    <li><b>1</b><h4>gdots.jp を開く</h4><p>Discord のアカウントでログイン</p></li>
+    <li><b>2</b><h4>Bot を入れる</h4><p>守りたいサーバーを選んで招待</p></li>
+    <li><b>3</b><h4>初期設定（任意）</h4><p>質問に答えるとチャンネルを整えてくれる</p></li>
+    <li><b>4</b><h4>権限チェック</h4><p>100点満点の点数と、危ない設定を確認</p></li>
+    <li><b>5</b><h4>守りをオン</h4><p>AutoMod・ハニーポット・連投検知</p></li>
+  </ol>
+  <p>ここまで、お支払い情報の登録はいりません。まずは手順4の<strong>権限チェックの点数</strong>を見てください。点数が低いところは、<a href="../discord-permissions/">Discordの危ない権限設定7選</a>で解説している設定が原因になっていることが多いです。</p>
+
+  <aside class="gdots-box" aria-label="GDots のご案内">
+    <p class="gdots-kicker">GDots｜Discord サーバー管理 Bot</p>
+    <p class="gdots-head">守る機能は、永久無料</p>
+    <p>権限チェック・AutoMod・ハニーポット・連投検知・つながる守り・処罰は、期間の定めなく無料でお使いいただけます。</p>
+    <ul class="gdots-points"><li>お支払い情報の登録なし</li><li>便利な機能は1サーバー月480円（税込）から</li></ul>
+    <a class="btn primary" href="https://gdots.jp/?utm_source=gulliver2021&amp;utm_medium=referral&amp;utm_campaign=col-gdots" target="_blank" rel="noopener">GDots を無料で始める →</a>
+  </aside>
+
+  <h2 id="dev">開発者・運営代行の方が GDots で設定するメリット</h2>
+  <p>お客様の Discord サーバーを作ったり運営したりしている方にとって、GDots は「自分の道具」としても使えます。自分で Bot を作ることもできますが、<strong>作ったあとに動かし続ける</strong>のは思った以上に大変です。</p>
+
+  <figure class="fig">
+    <div class="ngok">
+      <div class="ngok-col ng">
+        <p class="ngok-head" style="background:#d9534f">お客様ごとに Bot を自作する</p>
+        <ul class="tips-list">
+          <li><b>サーバー代と見守り</b>Bot が止まったら夜中でも対応</li>
+          <li><b>Discord の仕様変更への追従</b>変わるたびに直す</li>
+          <li><b>管理画面づくり</b>お客様が触れる画面まで作るのは大仕事</li>
+        </ul>
+      </div>
+      <div class="ngok-col ok">
+        <p class="ngok-head" style="background:#2e9d62">GDots で設定して納品する</p>
+        <ul class="tips-list">
+          <li><b>動かし続けるのは GDots</b>あなたは設定とお客様対応に集中</li>
+          <li><b>仕様変更も GDots 側で対応</b>機能も今なお増え続けている</li>
+          <li><b>管理画面はできあがっている</b>お客様の運営にもそのまま渡せる</li>
+        </ul>
+      </div>
+    </div>
+  </figure>
+
+  <ol class="perm-list">
+    <li><b>型を作って、何サーバーにも同じ設定</b><span class="risk">「読むだけ」「書き込める」などの権限セットを作り、たくさんのチャンネルへまとめて反映できます。</span><span class="fix">お客様ごとに一から設定し直す時間を減らせます</span></li>
+    <li><b>変更は記録に残り、元に戻せる</b><span class="risk">GDots で行った設定は操作ログに残ります。ロールの変更や一括付与は、あとから元に戻せます。</span><span class="fix">「だれが変えたのか」でお客様ともめない</span></li>
+    <li><b>成果をレポートで見せられる</b><span class="risk">期間ごとに、止めた荒らしやサーバーの動きをまとめ、PDF で渡せます（Standard プラン）。</span><span class="fix">保守や運営代行の価値を、数字で伝えられる</span></li>
+    <li><b>お客様のブランドで出せる</b><span class="risk">Bot の名前・アイコン・バナー・自己紹介を、サーバーごとに変えられます（Standard プラン）。</span><span class="fix">お客様のサーバーになじむ見た目で納品できる</span></li>
+    <li><b>お客様の負担を小さく始められる</b><span class="risk">守る機能は永久無料なので、お客様に費用をお願いせずに入れられます。</span><span class="fix">必要な機能が出てきたら、サーバーごとに Standard・Pro を選べる</span></li>
+  </ol>
+  <p>GDots を紹介してくださる方向けに、<a href="https://gdots.jp/partners?utm_source=gulliver2021&amp;utm_medium=referral&amp;utm_campaign=col-gdots" target="_blank" rel="noopener">GDots パートナープログラム</a>もあります（認定制）。パートナーになると、ご自身のサーバーで Standard プランの機能をずっと無料で使えます。</p>
+
+  <h2 id="maintenance">保守を任せる場合（Pro プランを保証）</h2>
+  <div class="apps-bonus">
+    <p style="margin:0;font-weight:700">サーバー保守をご依頼いただいている期間は</p>
+    <p class="bonus-big" style="margin:8px 0;font-size:24px;font-weight:700">GDots の <b>Pro プラン</b>を保証します</p>
+    <p style="margin:0;font-size:14px;color:var(--muted)">通常 1サーバー月2,980円（税込）。保守のあいだ、GDots の料金を別にお支払いいただく必要はありません。</p>
+  </div>
+  <p>保守では、GDots を使ってガリバーがサーバーを見守ります。</p>
+  <ul class="tips-list">
+    <li><b>権限の設計と定期の点検</b>運営メンバーの入れ替わりや Bot の追加のたびに、危ない権限が残っていないかを確認</li>
+    <li><b>荒らし・スキャムへの対応</b>止めるだけでなく、処罰の記録を残し、同じ手口の再発を防ぐ</li>
+    <li><b>毎月のレポート</b>どれだけ守れたか、サーバーがどう動いたかを数字でお伝え</li>
+    <li><b>Pro プランの機能もそのまま</b>翻訳・AI のまとめ・X の通知も、たくさん使えます</li>
+  </ul>
+  <p>保守の内容と料金は<a href="../../discord-server-maintenance/">サーバー保守のページ</a>、総額の目安は<a href="../../price/#examples">料金ページの依頼例</a>をご覧ください。</p>
+
+  <h2 id="faq">よくある質問</h2>
+  <div class="faq">
+    <details><summary>GDots は無料で使えますか？</summary><p>はい。権限チェック・AutoMod・ハニーポット・連投検知・つながる守り・処罰など、サーバーを守る機能は永久無料です。お支払い情報の登録もいりません。イベントログの全部の記録・予約投稿・レポート・翻訳などは、1サーバー月480円（税込）の Standard プランです。</p></details>
+    <details><summary>ガリバーに依頼しないと使えませんか？</summary><p>いいえ。GDots はどなたでもご自身で使えます。gdots.jp から Discord でログインし、Bot をサーバーに入れるだけで始められます。</p></details>
+    <details><summary>いま入れている Bot は外さないといけませんか？</summary><p>外さなくても使えます。同じ役目の Bot が2つあると、同じメッセージに2回反応することがあるので、GDots で置きかえられる Bot から順に外していくのがおすすめです。外す前に、その Bot に付いていた強い権限も見直してください。</p></details>
+    <details><summary>自分で使い始めてから、保守に切り替えられますか？</summary><p>できます。GDots の設定はそのまま引き継いで、保守を始められます。保守のあいだは Pro プランを保証します。</p></details>
+    <details><summary>保守をやめたら、GDots はどうなりますか？</summary><p>GDots はそのまま使えます。保守の終わりとともに Pro プランの保証も終わり、Free プランになります。続けて Standard・Pro を使いたい場合は、ご自身でご購入ください。設定は残ります。</p></details>
+    <details><summary>開発者として、お客様のサーバーに GDots を入れてもいいですか？</summary><p>もちろんです。お客様のサーバーを管理する権限がある方なら、管理画面から設定できます。Standard・Pro はサーバーごとのご契約です。</p></details>
+  </div>
+
+  <div class="box">
+    <h2>GDots での設定から、運営まで任せたい方へ</h2>
+    <p>サーバーの構築・保守・運営代行を承っています。保守のあいだは GDots の Pro プランを保証します。「自分で GDots を使うか、任せるか迷っている」というご相談も歓迎です。ご相談・診断は無料です。</p>
+    <div class="links" style="justify-content:flex-start">
+      <a class="btn primary" href="/contact/">無料で相談する</a>
+      <a class="btn dark" href="/discord-server-maintenance/">サーバー保守を見る</a>
+    </div>
+  </div>
+
+  <p style="margin-top:20px">関連記事：<a href="../discord-permissions/">Discordの危ない権限設定7選</a>／<a href="../discord-security/">Discordサーバーの乗っ取り対策</a>／<a href="../discord-rules/">Discordの規約違反になりやすい施策</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../../">ホーム</a> ／ <a href="../../price/">料金</a> ／ <a href="../">コラム</a> ／ <a href="../../privacy/">プライバシーポリシー</a> ／ <a href="https://gdots.jp" target="_blank" rel="noopener">GDots（Discord 権限チェックツール）</a> ／ © 2021 ガリバー
+  </div>
+</footer>
+
+<a class="float-cta" href="../../#contact">無料で相談する</a>
+
+</body>
+</html>
