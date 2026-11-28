@@ -295,6 +295,11 @@ footer a { color: var(--muted); }
 .g-plants .lh-link.primary small { color: #dcf3e6; }
 .lh-link.apps { background: #fff8ea; border: 2px solid var(--cta); }
 .lh-link.apps b { color: var(--cta-dark); font-size: 15px; }
+.lh-link.gdots { display: flex; align-items: center; gap: 12px; text-align: left; color: #fff; background: linear-gradient(120deg, #4752c4, #5865f2 55%, #38bdf8); border: 0; border-left: 0 !important; padding: 12px 16px; box-shadow: 0 6px 18px rgba(88,101,242,.35); }
+.lh-link.gdots:hover { background: linear-gradient(120deg, #3f49b5, #4f5ce6 55%, #2fb2ec); }
+.lh-link.gdots img { flex: none; width: 44px; height: 44px; border-radius: 12px; }
+.lh-link.gdots b { display: block; font-size: 15px; line-height: 1.35; }
+.lh-link.gdots small { color: #e3e8ff; margin-top: 2px; }
 .lh-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .lh-pair.trio { grid-template-columns: repeat(3, 1fr); }
 .lh-foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 20px; }
